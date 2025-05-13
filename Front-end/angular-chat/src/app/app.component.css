@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  background: linear-gradient(to right, #e3f2fd, #f7f7f7);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  height: 90vh;
+  margin: 30px auto;
+  border-radius: 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background-color: #3f51b5;
+  color: white;
+  justify-content: center;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.username-input {
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+  color: white;
+  text-align: center;
+  width: 100%;
+  outline: none;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.username-input::placeholder {
+  color: rgba(255, 255, 255, 0.8); /* placeholder בהיר */
+  opacity: 1;
+}
+
+.messages-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.message-bubble {
+  max-width: 75%;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border-radius: 15px;
+  display: inline-block;
+  animation: pop-in 0.3s ease-out;
+}
+
+.message-left {
+  background-color: #e3f2fd;
+  color: #333;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+.message-right {
+  background-color: #80deea;
+  color: white;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+}
+
+.msg-username {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #3f51b5; /* צבע תואם לכותרת */
+}
+
+.msg-text {
+  white-space: pre-wrap;
+}
+
+.input-area {
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+
+input.form-control {
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: 1px solid #3f51b5;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input.form-control:focus {
+  border-color: #3f51b5;
+}
+
+.chat-input-form {
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  padding: 12px;
+  z-index: 100;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-group .form-control {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.input-group .btn {
+  background-color: #3f51b5;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.input-group .btn:hover {
+  background-color: #303f9f; /* שינוי צבע כשעוברים עם העכבר */
+}
+
+textarea.form-control {
+  resize: none;
+  overflow-y: auto;
+  max-height: 150px;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
