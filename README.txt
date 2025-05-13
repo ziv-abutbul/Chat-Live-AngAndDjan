@@ -1,5 +1,5 @@
 # ChatAngularAndDjango Project
-
+![chat](https://github.com/user-attachments/assets/58f3b0b7-82ac-4da5-9a61-7c1a84839f45)
 ## How to Run the Project
 
 ### Backend (Django)
